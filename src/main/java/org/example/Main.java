@@ -1,6 +1,6 @@
-
 // Created by Kayne Rodrigo
 package org.example;
+
 import java.util.Scanner;
 
 public class Main {
@@ -8,11 +8,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter temperature in Celsius: ");
+        float celsius = sc.nextFloat();
 
-        float Celcius = sc.nextFloat();
+        float fahrenheit = celsius * (9.0f / 5.0f) + 32;
 
-        float Fahrenheit = Celcius * ((float) 9 /5) + 32;
-        String finalAnswer = String.format("%.2f", Fahrenheit);
-        System.out.println("Temperature in Fahrenheit: " + finalAnswer);
+        System.out.printf("Temperature in Fahrenheit: %.2f%n", fahrenheit);
+
+        sc.close();
     }
 }
